@@ -1,0 +1,21 @@
+#include <stdio.h>
+int fabi(int n)
+{
+    if(n==0||n==1)
+    return n;
+    else
+    return fabi(n-1)+fabi(n-2);
+   
+}
+int main() {
+   int n;
+   scanf("%d",&n);
+   int k=fabi(n);
+   printf("%d",k);
+  
+
+    
+}
+OUTPUT::
+8
+21
