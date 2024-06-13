@@ -47,7 +47,7 @@ Sample Output 1
 
 int main() {
 
-   int n,count=0;
+   int n,count=0,coun=0;
     scanf("%d",&n);
     int a[n];
     for(int i=0;i<n;i++)
@@ -55,7 +55,14 @@ int main() {
         scanf("%d",&a[i]);
         }
  
-    for(int i=0;i<n-2;i++)
+     for(int i=0;i<n;i++)
+    {
+        if(a[i]==0){
+            coun++;
+        }
+     }
+     // printf("%d",coun);
+    for(int i=0;i<=n-coun;i++)
     {
         if(a[i]==0){
             count++;
@@ -68,7 +75,7 @@ int main() {
     }
         
        // printf("%d",count);
-    for(int i=n-(count);i<n;i++)
+    for(int i=n-(coun);i<n;i++)
      {
          a[i]=0;
          
