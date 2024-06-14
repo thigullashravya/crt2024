@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int *a;
+a=(int*)malloc(5*sizeof(int));
+//b=(int*)malloc(sizeof(int));
+printf("eneter 5 ele");
+for(int i=0;i<5;i++)
+{
+    scanf("%d",(a+i));
+}
+for(int i=0;i<5;i++)
+{
+    printf("%d Address =%u\n",*(a+i),(a+i));
+    
+}
+}
+OUTPUT:
+eneter 5 ele6
+7
+8
+4
+3
+6 Address =22106784
+7 Address =22106788
+8 Address =22106792
+4 Address =22106796
+3 Address =22106800
+
