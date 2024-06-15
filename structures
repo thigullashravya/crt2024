@@ -1,0 +1,45 @@
+#include <stdio.h>
+struct employee
+{
+    int empno;
+    char name[40];
+    float sal,hra,da,pf,gross,net;
+}e;
+
+int main() {
+   printf("enter employee no=");
+   scanf("%d",&e.empno);
+    printf("enter name=");
+   scanf("%s",&e.name);
+    printf("enter basic salary=");
+   scanf("%f",&e.sal);
+   e.hra=e.sal*0.15;
+    e.da=e.sal*0.1;
+   e.pf=e.sal*0.15;
+  e.gross=e.hra+e.da+e.sal;
+  e.net=e.gross-e.pf;
+  printf("no=%d\n",e.empno);
+   printf(" name=%s\n",e.name);
+     printf(" basic salary=%f\n",e.sal);
+     printf("hra=%.2f\n",e.hra);
+     printf("da=%.2f\n",e.da);
+  printf("pf=%.2f\n",e.pf);
+  printf("gross salary=%.2f",e.gross);
+  printf("net salary=%.2f",e.net);
+  
+  
+}  
+  
+  OUTPUT:
+  enter employee no=555
+enter name=sss
+enter basic salary=4500
+no=555
+ name=sss
+ basic salary=4500.000000
+hra=675.00
+da=450.00
+pf=675.00
+gross salary=5625.00net salary=4950.00
+
+  
