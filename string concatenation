@@ -1,0 +1,51 @@
+Write a program to find the concatenation of the given two strings
+
+Input Format
+
+Input consists of 2 strings.
+
+Constraints
+
+string
+
+Output Format
+
+print result string
+
+Sample Input 0
+
+Sun
+Microsystems
+Sample Output 0
+
+Sun Microsystems
+Sample Input 1
+
+Oracle
+Corporation
+Sample Output 1
+
+Oracle Corporation
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int l1,l2,i,j;
+    char s[80],s1[80],s3[100];
+    scanf("%s",s); 
+        scanf("%s",s1);
+    l1=strlen(s);
+    l2=strlen(s1);
+    for(i=0;i<l1;++i)
+        s3[i]=s[i];
+    s3[i]=' ';
+   for(j=0;j<l2;j++)
+    {
+        s3[i+j+1]=s1[j];
+    }
+    s3[i+j+1]='\0';
+         printf("%s",s3);
+
+}
