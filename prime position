@@ -1,0 +1,48 @@
+Write a program to display the characters in prime position of a given string.
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+Print prime position characters
+
+Sample Input 0
+
+Computer
+Sample Output 0
+
+omue
+Sample Input 1
+
+Characters in Prime Position
+Sample Output 1
+
+haat nies
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+   char s[90],count=0;
+    fgets(s,90,stdin);
+    for(int i=1;i<strlen(s);i++)
+    {
+        count=0;
+        for(int j=1;j<=i;j++)
+        {
+            if(i%j==0)
+                count++;
+        }
+        if(count==2)
+       printf("%c",s[i-1]);
+    }
+}
