@@ -1,0 +1,53 @@
+A group of people are playing a game based on vowels. If a person among them says a word or sentence others should tell the word immediately. Where while telling the word they just want to replace each vowel with the next immediate vowel lexicographical order i.e. 'a’ will be replaced by ‘e’, ‘e’ will be replaced by ‘i’, ‘i’ will be replaced by ‘o’, ‘o’ will be replaced by ‘u’, ‘u’ will be replaced by ‘a’. The person who says the word first with the mentioned changes is the winner of the game. Sonu is failing all the time. He is good in English but he couldn't do it properly for a lengthy sentence. Help him to win the game by writing a program implementing the same.
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+print output
+
+Sample Input 0
+
+I am a legend
+Sample Output 0
+
+I em e ligind
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    char s[80];
+    fgets(s,80,stdin);
+    char  a[5]={'a','e','i','o','u'};
+    for(int i=0;i<strlen(s);i++)
+    {
+        for(int j=0;j<5;j++)
+        {
+        if(s[i]==a[j])
+        {
+            
+            if(s[i]=='u')
+                s[i]=a[0];
+           
+           else
+             s[i]=a[j+1];
+           break;
+        }
+                   }
+    }
+
+     for(int i=0;i<strlen(s);i++)
+    {
+         printf("%c",s[i]);
+     }
+}
